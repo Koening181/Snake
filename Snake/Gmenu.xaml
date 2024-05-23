@@ -1,0 +1,62 @@
+﻿<Window x:Class="Snake.Gmenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake"
+        mc:Ignorable="d"
+        Title="Snake" Height="500" Width="800"
+        MinHeight="300" MinWidth="300"
+        Background="{StaticResource BackgroundColor}"
+        Foreground="{StaticResource TextColor}"
+        FontFamily="{StaticResource MainFont}"
+        WindowStartupLocation="CenterScreen"
+        Icon="assets/icon.png"
+        >
+    <Viewbox>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border x:Name="GridBorder1"
+                    Grid.Row="1"
+                    BorderBrush="{StaticResource GridLineColor}"
+                    BorderThickness="1.5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    RenderOptions.EdgeMode="Aliased"
+                    Margin="20, 0, 20, 20">
+
+                <UniformGrid x:Name="GameGrid1"
+                            Width="400"
+                            Height="400"
+                            Background="{StaticResource GridBackgroundColor}"
+                            SnapsToDevicePixels="True"
+                            RenderOptions.BitmapScalingMode="HighQuality"></UniformGrid>
+            </Border>
+            <Border x:Name="Overlay1"
+                    Grid.Row="1"
+                    Background="{StaticResource OverlayColor}"
+                    Height="{Binding Path=ActualHeight, ElementName=GridBorder}"
+                    Width="{Binding Path=ActualWidth, ElementName=GridBorder}"
+                    Margin="{Binding Path=Margin, ElementName=GridBorder}"
+                    RenderOptions.EdgeMode="Aliased">
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,122">
+                    <TextBlock Text ="Добро пожаловать в игру Змейка" FontSize="20" RenderTransformOrigin="0.5,0.5" Height="92"/>
+                    <Button Content="Начать кушать пельмешки" Click="Button_Click" Margin="5" Height="24" Width="345"/>
+                    <Button Content="Управление" Click="Button_Click_1" Margin="5"/>
+                    <Button Content="Покинуть игру" Click="Button_Click_2" Margin="5"/>
+                </StackPanel>
+
+
+
+
+
+
+            </Border>
+        </Grid>
+    </Viewbox>
+</Window>
+

@@ -1,0 +1,17 @@
+﻿<Application x:Class="Snake.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Snake"
+             StartupUri="Gmenu.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="BackgroundColor">#7a8d73</SolidColorBrush>
+        <SolidColorBrush x:Key="GridBackgroundColor">#5f974a</SolidColorBrush>
+        <SolidColorBrush x:Key="GridLineColor">#42f200</SolidColorBrush>
+        <SolidColorBrush x:Key="BackgroundColor1">#FF1493</SolidColorBrush>
+        <SolidColorBrush x:Key="GridBackgroundColor1">#FF1493</SolidColorBrush>
+        <SolidColorBrush x:Key="GridLineColor1">#FF1493</SolidColorBrush>
+        <SolidColorBrush x:Key="TextColor">#eee</SolidColorBrush>
+        <SolidColorBrush x:Key="OverlayColor">#5f000000</SolidColorBrush>
+        <FontFamily x:Key="MainFont">assets/#Droid Sans Mono</FontFamily>
+    </Application.Resources>
+</Application>
